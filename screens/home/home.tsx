@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, View } from "react-native"
+import { Button, Image, StyleSheet, Text, View } from "react-native"
 
 import CardsComponent from "../../components/cards/cards"
 import EcoNoticias from "../../components/EcoNoticias/EcoNoticias";
@@ -24,6 +24,7 @@ const HomeComponent: React.FC<HomeComponentProps> = () => {
                     <>
                         <View>
                             <Text style={styles.title}>Hello User</Text>
+                            <Image style={styles.logo} source={require('../../assets/images/Logo.png')} />
                             <CardsComponent>
                                 <Text style={styles.textCard}>Tips</Text>
                                 <Button title='Tips' onPress={() => { } } />
@@ -39,6 +40,14 @@ const HomeComponent: React.FC<HomeComponentProps> = () => {
     );
 };
 const styles = StyleSheet.create({
+    logo: {
+        width: 100,
+        height: 100,
+        display: "flex",
+        alignSelf: 'center',
+        justifyContent: 'center',
+        marginVertical: 50,
+    },
     title: {
         fontSize: 23,
         paddingBottom: 50,

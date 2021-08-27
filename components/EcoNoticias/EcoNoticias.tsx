@@ -19,7 +19,7 @@ const EcoNoticias: React.FC<EcoNoticiasProps> = () => {
     return (
         <>
             {pressedButton === false ? (
-            <View>
+            <View style={styles.container}>
                 <Text style={styles.title}>Soy el componente Eco-Noticias</Text>
                 <CardsComponent>
                     <Text style={styles.textCard}>Eco-Noticias</Text>
@@ -31,6 +31,11 @@ const EcoNoticias: React.FC<EcoNoticiasProps> = () => {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        display: "flex",
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     textCard: {
         color: 'white',
         fontSize: 21,
